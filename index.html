@@ -1,3 +1,11 @@
+import { Analytics } from '@vercel/analytics/next';
+ 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -675,3 +683,5 @@
 
 </body>
 </html>
+);
+}
