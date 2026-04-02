@@ -114,4 +114,21 @@
 		}
 	});
 
+		// ===== ADD THIS BELOW — Collaboration Section Filter =====
+	$('.collab-tab').on('click', function () {
+		$('.collab-tab').removeClass('active');
+		$(this).addClass('active');
+
+		var filter = $(this).data('filter');
+
+		$('.collab-item').each(function () {
+		if (filter === 'all' || $(this).data('type') === filter) {
+			$(this).removeClass('collab-hidden');
+		} else {
+			$(this).addClass('collab-hidden');
+		}
+		});
+	});
+	// ===== END Collaboration Filter =====
+
 })(jQuery);
